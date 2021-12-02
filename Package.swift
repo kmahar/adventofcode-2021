@@ -4,7 +4,8 @@ import PackageDescription
 let package = Package(
     name: "AdventOfCode2021",
     targets: [
-        .executableTarget(name: "day1"),
+        .target(name: "Utilities"),
+        .executableTarget(name: "day1", dependencies: ["Utilities"]),
         .executableTarget(name: "day2"),
         .executableTarget(name: "day3"),
         .executableTarget(name: "day4"),
@@ -28,6 +29,6 @@ let package = Package(
         .executableTarget(name: "day22"),
         .executableTarget(name: "day23"),
         .executableTarget(name: "day24"),
-        .executableTarget(name: "day25")
+        .executableTarget(name: "day25"),
     ]
 )
