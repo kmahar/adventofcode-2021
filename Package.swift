@@ -7,7 +7,7 @@ let package = Package(
         .target(name: "Utilities"),
         .executableTarget(name: "day1", dependencies: ["Utilities"]),
         .executableTarget(name: "day2", dependencies: ["Utilities"]),
-        .executableTarget(name: "day3"),
+        .executableTarget(name: "day3", dependencies: ["Utilities"]),
         .executableTarget(name: "day4"),
         .executableTarget(name: "day5"),
         .executableTarget(name: "day6"),
