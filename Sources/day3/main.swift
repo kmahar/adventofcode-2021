@@ -5,19 +5,20 @@ let data = try readLines(forDay: 3).map { Array($0).map { Int(String($0))! } }
 let bitCount = data[0].count
 
 func findMostCommonBit(in data: [[Int]], at idx: Int) -> Int {
-    var bitBalance = 0
+    var zeroCount = 0
+    var oneCount = 0
     for line in data {
         switch line[idx] {
         case 0:
-            bitBalance -= 1
+            zeroCount += 1
         case 1:
-            bitBalance += 1
+            oneCount += 1
         default:
             fatalError("Invalid bit: \(line[idx])")
         }
     }
 
-    return bitBalance < 0 ? 0 : 1
+    return zeroCount > oneCount ? 0 : 1
 }
 
 func findLeastCommonBit(in data: [[Int]], at idx: Int) -> Int {
