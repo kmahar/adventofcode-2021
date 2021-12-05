@@ -6,5 +6,5 @@ public func readFile(forDay day: Int) throws -> String {
 }
 
 public func readLines(forDay day: Int, omittingEmptySubsequences: Bool = true) throws -> [String.SubSequence] {
-    return try readFile(forDay: day).split(separator: "\n", omittingEmptySubsequences: omittingEmptySubsequences)
+    try readFile(forDay: day).split(separator: "\n", omittingEmptySubsequences: omittingEmptySubsequences)
 }

@@ -16,11 +16,11 @@ struct PositionPart1 {
     mutating func move(_ movement: Movement) {
         switch movement.direction {
         case .forward:
-            x += movement.units
+            self.x += movement.units
         case .down:
-            y -= movement.units
+            self.y -= movement.units
         case .up:
-            y += movement.units
+            self.y += movement.units
         }
     }
 }
@@ -33,12 +33,12 @@ struct PositionPart2 {
     mutating func move(_ movement: Movement) {
         switch movement.direction {
         case .forward:
-            x += movement.units
-            y -= aim * movement.units
+            self.x += movement.units
+            self.y -= self.aim * movement.units
         case .down:
-            aim -= movement.units
+            self.aim -= movement.units
         case .up:
-            aim += movement.units
+            self.aim += movement.units
         }
     }
 }
